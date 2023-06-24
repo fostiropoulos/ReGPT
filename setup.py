@@ -10,7 +10,12 @@ setup(
     url="https://iordanis.me",
     packages=find_packages(),
     description="Regex GPT",
-    install_requires=["transformers", "reanalogy", "ablator", "mock"],
+    install_requires=[
+        "transformers",
+        "reanalogy @ git+https://github.com/fostiropoulos/reanalogy.git",
+        "ablator",
+        "mock",
+    ],
     python_requires=">3.10",
     long_description=Path(package_path).parent.joinpath("README.md").read_text(),
 )
